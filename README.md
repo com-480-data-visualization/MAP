@@ -40,9 +40,19 @@ We find a mean departure delay of 9.04 minutes with a median of 0.00, indicating
 
 We then explore the overall trends of the dataset across years. The mean departure delay, while peaking in 2014, has a generally increasing pattern from earlier years to later years (as can be seen in Figure 1), suggesting worsening delays. Regarding cancellation rates, we don't see a clear increasing or decreasing pattern over years (Figure 2). Similarly, regarding diversions, they remain relatively stable across the years (Figure 3), suggesting that flight re-routing due to operational constraints has not changed significantly.
 
+![Figure 1: Average Departure Delay by Year](eda-fig1.png)
+
+![Figure 2: AverageCancellation Rate by Year](eda-fig2.png)
+
+![Figure 3: Mean of the number of diverted flights per year](eda-fig3.png)
+
 We also find that flights scheduled earlier in the day, particularly around 5 AM, tend to experience minimal delays compared to the rest of the day, with many even departing slightly ahead of schedule. However, delays start accumulating throughout the afternoon, reaching their maximum in the late evening at around 8 PM (as can be seen in Figure 4). This pattern suggests that delays are compounding over the course of the day, likely due to higher air traffic congestion, operational inefficiencies, or rolling effects from earlier delays.
 
+![Figure 4: Mean Departure Delay by Scheduled Hour](eda-fig4.png)
+
 Additionally, we observe seasonal variations in flight delays (Figure 5). They tend to peak in June/July which aligns with the vacation season. The lowest average delays occur in September, possibly due to lower travel demand directly after the holidays and start of the school semester.
+
+![Figure 5: Average Departure Delay by Month](eda-fig5.png)
 
 ### Related work
 
