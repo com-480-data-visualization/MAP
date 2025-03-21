@@ -28,13 +28,19 @@ Flight delays are a day-to-day issue affecting millions of people worldwide. The
 
 ### Problematic
 
-The audience of this visualization expands to the people who just want to choose their flights as well as the researchers who are working on this problem in this complex dynamics. This data can help people choose the airlines they want to fly with, or even depending on their origin and destination, they may have different options for their airport, for example, New Yorkers can choose between John F. Kennedy International or LaGuardia. In comparison, JFK has stronger operations, but it is busier and aircraft have to wait in long queues for take-off, so it is not that easy to choose between these two. Also, we may also visualize the effect of flight time on the delays, for example, it may be better to take a night flight to have less delay. In addition, the temporal pattern of this data may help customer rights activists track the performance of the airlines and their (hopefully) improvements through the passing of time. The decomposition of delay and visualizing it for different airports and airlines would also help the experts who are working in this area to have a diagnosis of the problems and find the bottlenecks. We hope that this visualization contributes to the transparency of this market and helps the customers to choose with correct and complete information. To this end, we will use different visualization techniques. We will provide customers with a dashboard to compare the options they may have for the airlines and airports. In addition, we may also use maps to visualize the statistics of the airports.
-
-We emphasize on the fact that the data we are using for this visualization is out-dated, because there is no publicly available recent dataset and the aviation data is expensive. However, the visualization techniques will remain same for recent data and this project can be easily adopted to recent data, if available.
-
 > Frame the general topic of your visualization and the main axis that you want to develop.
 > - What am I trying to show with my visualization?
 > - Think of an overview for the project, your motivation, and the target audience.
+
+Flight delays are a pervasive and frustrating experience for millions of travelers each year. These delays can come from a variety of factors, ranging from weather to operational inefficiencies, and impact not only passengers, but also airlines, airports, and broader logistical networks. Despite the scale of the issue, passengers often lack access to comprehensive and interpretable data that can help them make informed travel decisions. Moreover, stakeholders and professionals in the aviation sector struggle to identify delay trends at scale.
+
+In this project, we aim to visualize patterns of domestic flight delays in the United States between 2009 and 2018. Our central axis include delay frequency and causes, and we aim to explore how does it vary across time, airlines, airports, and flight schedules. By this, we aim to answer questions such as: Which airports or airlines experience the most delays? How have delay times and causes changed over the years? Do flight times (e.g., morning versus evening) affect the likelihood of experiencing delays?
+
+The primary audience for our project includes A) travelers who can use the visualizations to make better choices about flights, airlines, and airports, and B) researchers and policymakers who may use delay trends to find areas for operational improvement regarding transportation efficiency or advocate for passenger rights.
+
+To serve this audience, we aim to develop an easy-to-use interactive visualization dashboard that allows users to compare airports and airlines, explore delay causes, and analyze temporal trends. Geo-spatial visualizations on a map, which we aim to include in our website, will further help users in locating the spots with higher likelihoods of delay across the US. Although the dataset is slightly outdated (with a cutoff date of 2018), the goal of our project is to demonstrate visualization approaches that are also scalable and adaptable to more recent rich datasets in case of availability in the future.
+
+
 
 ### Exploratory Data Analysis
 
