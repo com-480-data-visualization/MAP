@@ -79,20 +79,31 @@ Additionally, we observe seasonal variations in flight delays (Figure 5). They t
 
 ### Related work
 
-The most important related works to our project are websites like [Flight Delay Information Panel of Federal Aviation Administration (FAA)](https://www.fly.faa.gov/flyfaa/usmap.jsp?legacy=true) and [FlightAware](https://www.flightaware.com/live/cancelled), that are providing a map for the overall statistics of the delays of airports. However these websites provides us with a valuable real-time information about the current status of the airports, they do not help the people our experts to comprehend a meaningful pattern through the delays. We are aiming for equipping people and researchers with a tool to understand the pattern. [FlightRadar24](https://www.flightradar24.com/51.47,0.46/6) and [FlightStats](https://www.flightstats.com/v2/flight-tracker/search) are also providing realtime details about the flights and the delays of the airports on a map. However, they are mainly designed for realtime tracking of a specific flight, not to compare between the airports or the airlines. This vizaulization on [kaggle](https://www.kaggle.com/code/anshuls235/data-story-telling-flights-delay) also provides an statistics on delays of airports across US states.
-
-There is also plenty of works in the scientific literature for predicting the delays using machine learning models, classified by this survey [1]. This paper also provided a novel network based methodology for predicting the delays [2]. However, we are not interested in ML predictions since they can be highly inaccurate, but provide visualization that may be useful for data sotries to reveal the underlying patterns.
-
-We confirm that non of us has worked with this data before and this is our first facing with this data.
-
-[1] Carvalho, L., Sternberg, A., Maia Gonçalves, L., Beatriz Cruz, A., Soares, J. A., Brandão, D., Carvalho, D., & Ogasawara, E. (2020). On the relevance of data science for flight delay research: A systematic review. Transport Reviews, 41(4), 499–528. https://doi.org/10.1080/01441647.2020.1861123.
-
-[2] Wu, Y., Yang, H., Lin, Y., & Liu, H. (2022). Spatiotemporal Propagation Learning for Network-Wide Flight Delay Prediction. arXiv preprint arXiv:2207.06959. Retrieved from https://arxiv.org/abs/2207.06959.
-
 > - What others have already done with the data?
 > - Why is your approach original?
 > - What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
 > - In case you are using a dataset that you have already explored in another context (ML or ADA course, semester project...), you are required to share the report of that work to outline the differences with the submission for this class.
+
+The dataset has been previously analyzed by a couple of researchers, including Shaalan Marwan who provides an analysis of this dataset, focusing on data statistics and static visualizations.  Similarly, prior work [1] has utilized PowerBI to analyze this data, highlighting key performance indicators related to flight operations. 
+
+Moreover, there are other works related to our project, including [Flight Delay Information Panel of Federal Aviation Administration (FAA)](https://www.fly.faa.gov/flyfaa/usmap.jsp?legacy=true), [FlightAware](https://www.flightaware.com/live/cancelled), [TranStats](https://www.transtats.bts.gov/ot_delay/ot_delaycause1.asp) from the Bureau of Transportation Statistics, or this [Kaggle visualization](https://www.kaggle.com/code/anshuls235/data-story-telling-flights-delay), that provide visualizations and maps for the overall delay statistics. However, while those provide real-time information about the current status of the airports, they do not necessarily help users to extract patterns over time. [FlightRadar24](https://www.flightradar24.com/51.47,0.46/6) and [FlightStats](https://www.flightstats.com/v2/flight-tracker/search) also provide real-time details on the flights and the delays of the airports on a map. However, they are mainly designed for real-time tracking of a specific flight, not to compare trends among airports or airlines.
+
+Particularly, we distinguish ourself by focusing on temporal patterns. By providing trends such as the accumulation of delays throughout the day and also variations in each season in our interactive dashboard, we aim to find how the patterns can inform operational strategies for airlines and airports. We thus focus on the practical applications of the data and aim to offer actionable insights that go beyond static visualizations or descriptive statistics.
+
+Finally, there also exist works in the scholarly literature for predicting the delays using machine learning (ML) models [2, 3]. However, we are not interested in ML predictions but providing visualization to help users extract the underlying patterns.
+
+We confirm that non of us has worked with this data before and this is our first facing with this data.
+
+References:
+
+
+[1]: Akachouche, Chafik. (2024). Flight analyzes data from 2009 to 2018 using PowerBI. 10.13140/RG.2.2.26957.96480. 
+
+
+[2] Carvalho, L., Sternberg, A., Maia Gonçalves, L., Beatriz Cruz, A., Soares, J. A., Brandão, D., Carvalho, D., & Ogasawara, E. (2020). On the relevance of data science for flight delay research: A systematic review. Transport Reviews, 41(4), 499–528. https://doi.org/10.1080/01441647.2020.1861123.
+
+[3] Wu, Y., Yang, H., Lin, Y., & Liu, H. (2022). Spatiotemporal Propagation Learning for Network-Wide Flight Delay Prediction. arXiv preprint arXiv:2207.06959. Retrieved from https://arxiv.org/abs/2207.06959.
+
 
 ## Milestone 2 (18th April, 5pm)
 
