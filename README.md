@@ -92,9 +92,9 @@ Particularly, we distinguish ourself by focusing on temporal patterns. By provid
 
 Finally, there also exist works in the scholarly literature for predicting the delays using machine learning (ML) models [2, 3]. However, we are not interested in ML predictions but providing visualization to help users extract the underlying patterns.
 
-We confirm that non of us has worked with this data before and this is our first facing with this data.
+We confirm that non of us has worked with this data before and this is our first time facing this data.
 
-References:
+*References:*
 
 
 [1]: Akachouche, Chafik. (2024). Flight analyzes data from 2009 to 2018 using PowerBI. 10.13140/RG.2.2.26957.96480. 
