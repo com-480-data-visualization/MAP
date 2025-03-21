@@ -12,6 +12,12 @@
 
 ## Milestone 1 (21st March, 5pm)
 
+delay
+/dɪˈleɪ/
+
+noun
+    The nightmare of flyers.
+
 ![Queue of Aircrafts](cover_image.webp)
 
 copyright for [Pilot Bible](https://pilotbible.com/atc-slots-ready-message/)
