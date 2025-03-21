@@ -49,19 +49,19 @@ To serve this audience, we aim to develop an easy-to-use interactive visualizati
 > Pre-processing of the data set you chose
 > - Show some basic statistics and get insights about the data
 
-The dataset contains 61,556,964 records spanning ten years (mean of 6155696.4 per year, SD = 481266.1), ranging from ~ 5.6M records in 2016 to ~ 7.2M records in 2018. Figure 1 shows a stacked bar chart of the number of flights per the top 10 airports with the most flights in the dataset. We observe that the top airports are major hubs such as ATL, ORD, and DFW, which is expected given their high traffic volume. We see consistency in data with the top airlines being among the main carriers for the hub, e.g., Delta (DL) for ATL, United (UA) for ORD, and American (AA) for DFW.
+The dataset contains 61,556,964 records spanning ten years (mean of 6155696.4 per year, SD = 481266.1), ranging from ~ 5.6M records in 2016 to ~ 7.2M records in 2018. Figure 1 shows a stacked bar chart of the number of flights per the top 10 airports with the most flights in the dataset. We observe that the top airports are major hubs such as ATL, ORD, and DFW, which is expected due to their high traffic volume. We see consistency in data with the top airlines being among the main carriers for the hub, e.g., Delta (DL) for ATL, United (UA) for ORD, and American (AA) for DFW.
 
 ![Figure 1: Flight Counts per Airport and Airline (Top 10 Airports)](eda-fig1.png)
 
 *Figure 1: Flight Counts per Airport and Airline (Top 10 Airports).*
 
-We find a mean departure delay of 9.04 minutes with a median of zero, indicating that many flights depart on time. A regression between the planned and actual time spent in a flight shows that actual flight durations usually match the scheduled durations (Figure 2). However, departure delay comes with a high standard deviation (37.14), suggesting variability in departure delay. Similarly, regarding the arrival delay, we find a mean of 4.70 and a median of -1.00 minutes (indicating arriving earlier than expected), but a standard deviation of 39.44. We also find that the 75th percentile for this feature is 18 minutes, suggesting that most flights have relatively small delays. An observation of the overall cancellation (1.58%) and diversion rate (0.24%) shows small relative values.
+We find a mean departure delay of 9.04 minutes with a median of zero. This indicates that many flights do not depart late. A regression between the planned and actual time spent in a flight shows that actual flight durations usually match the scheduled durations (Figure 2). However, departure delay has a high standard deviation (37.14), suggesting variability in departure delay. Similarly, for the arrival delay, we find a mean of 4.70 and a median of -1.00 minutes (indicating arriving earlier than expected), but a standard deviation of 39.44. We also find that the 75th percentile for this feature is 18 minutes, which can mean that most flights have relatively small delays. Observing the overall cancellation (1.58%) and diversion rate (0.24%) shows small relative values.
 
 ![Figure 2: Regression of actual versus scheduled flight durations](eda-fig2.png)
 
 *Figure 2: Regression of actual versus scheduled flight durations.*
 
-We then explore the overall trends of the dataset across years. The mean departure delay, while peaking in 2014, has a generally increasing pattern (see Figure 3), suggesting worsening delays. Regarding cancellation rates, we don't see a clear increasing or decreasing pattern over years (Figure 4).
+We then explore the overall trends of the dataset across years. The mean departure delay peaks in 2014, but has a generally increasing pattern (see Figure 3), suggesting worsening delays. For cancellation rates, we don't see a clear increasing or decreasing pattern over years (Figure 4).
 
 ![Figure 3: Average Departure Delay by Year](eda-fig3.png)
 
@@ -71,7 +71,7 @@ We then explore the overall trends of the dataset across years. The mean departu
 
 *Figure 4: Average cancellation rate by year.*
 
-We also find that flights scheduled earlier in the day, particularly around 5 AM, tend to experience minimal delays compared to the rest of the day, with many even departing slightly ahead of schedule. However, delays start accumulating throughout the afternoon (Figure 5) with the majority of delays being due to the previous flight being late (Figure 6), reaching their maximum in the late evening at around 8 PM (as can be seen in Figure 7). This pattern is likely due to higher air traffic congestion, operational inefficiencies, or rolling effects from earlier delays.
+We also find that flights scheduled earlier in the day, particularly around 5 AM, have less delays compared to the rest of the day, with many even departing ahead of schedule. However, delays start accumulating until the afternoon (Figure 5) with the majority of delays being due to the previous flight being late (Figure 6), reaching their maximum in the late evening at around 8 PM (as can be seen in Figure 7). This pattern is possibly due to higher air traffic congestion or rolling effects from earlier delays.
 
 
 
@@ -87,11 +87,12 @@ We also find that flights scheduled earlier in the day, particularly around 5 AM
 
 *Figure 7: Mean departure delay by scheduled hour.*
 
-Additionally, we observe seasonal variations in flight delays (Figure 8). They tend to peak in June/July which aligns with the vacation season. The lowest occurs in September, possibly due to lower travel demand directly after the holidays and the semester start.
+Additionally, we observe seasonal patterns in flight delays (Figure 8). They tend to peak in June/July which aligns with the vacation time. The lowest occurs in September, possibly due to lower travel demand directly after the holidays and the semester start.
 
 ![Figure 8: Average Departure Delay by Month](eda-fig8.png)
 
 *Figure 8: Average departure delay by month.*
+
 
 ### Related work
 
