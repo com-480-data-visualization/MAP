@@ -12,6 +12,10 @@
 
 ## Milestone 1 (21st March, 5pm)
 
+![Queue of Aircrafts](cover_image.webp)
+
+copyright for [Pilot Bible](https://pilotbible.com/atc-slots-ready-message/)
+
 **10% of the final grade**
 
 This is a preliminary milestone to let you set up goals for your final project and assess the feasibility of your ideas.
