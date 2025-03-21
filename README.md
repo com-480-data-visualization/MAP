@@ -1,10 +1,12 @@
 # Project of Data Visualization (COM-480)
 
-| Student's name | SCIPER |
-| -------------- | ------ |
-| | |
-| | |
-| | |
+| Student's name      | SCIPER |
+| ------------------- | ------ |
+| Aryan Ahadinia      | 387868 |
+| Matin Ansaripour    | 370664 |
+| Seyed Parsa Neshaei | 355567 |
+
+(alphabetical order)
 
 [Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
 
