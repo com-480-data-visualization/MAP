@@ -72,6 +72,11 @@ Additionally, we observe seasonal variations in flight delays (Figure 5). They t
 
 ### Related work
 
+The most important related works to our project are websites like Flight Delay Information Panel of Federal Aviation Administration and FlightAware, that are providing a map for the overall statistics of the delays of airports. However these websites provides us with a valuable real-time information about the current status of the airports, they do not help the people our experts to comprehend a meaningful pattern through the delays. We are aiming for equipping people and researchers with a tool to understand the pattern. FlightRadar24 and FlightStats are also providing realtime details about the flights and the delays of the airports on a map. However, they are mainly designed for realtime tracking of a specific flight, not to compare between the airports or the airlines.
+
+There is also plenty of works in the scientific literature for predicting the delays using machine learning models, classified by this survey. This paper also provided a novel network based methodology. However, we are not interested in ML predictions since they can be highly inaccurate, but to extract the patterns and leave the people to judge themselves.
+
+We confirm that non of us has worked with this data before and this is our first facing with this data.
 
 > - What others have already done with the data?
 > - Why is your approach original?
