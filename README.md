@@ -65,7 +65,7 @@ We find a mean departure delay of 9.04 mins with a median of zero, indicating th
 
 *Fig 2*
 
-Exploring the overall trends of the dataset across years, the mean departure delay peaks in 2014, but has a generally increasing pattern (Fig 3). For cancellation rates, we don't see a clear pattern over years (Fig 4).
+Exploring the overall trends across years, the mean departure delay peaks in 2014, but has a generally increasing pattern (Fig 3). For cancellation rates, we don't see a clear pattern over years (Fig 4).
 
 ![Fig 3](eda-fig3.png)
 
@@ -75,7 +75,7 @@ Exploring the overall trends of the dataset across years, the mean departure del
 
 *Fig 4*
 
-We also find that flights scheduled earlier in the day, particularly around 5 AM, have less delays, with many even departing ahead of schedule. However, delays start accumulating until the afternoon (Fig 5) with the majority being due to the previous flight being late (Fig 6), reaching their maximum at ~ 8 PM (Fig 7). This is possibly due to higher air traffic congestion or rolling effects from earlier delays.
+We also find that flights scheduled earlier in the day (~ 5 AM) have less delays, with many even departing ahead of schedule. However, delays start accumulating until the afternoon (Fig 5) with the majority being due to the previous flight being late (Fig 6), reaching their maximum at ~ 8 PM (Fig 7). This is possibly due to higher congestion or rolling effects from earlier delays.
 
 
 ![Fig 5](eda-fig5.png)
