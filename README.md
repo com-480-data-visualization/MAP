@@ -135,6 +135,7 @@ We confirm that non of us has worked with this data before and this is our first
 
 **10% of the final grade**
 
+Please proceed to './m2/report.pdf' and https://aryanahadinia.github.io/flightdelay/ for the website.
 
 ## Milestone 3 (30th May, 5pm)
 
