@@ -1,1 +1,3 @@
-Please find the report for Milestone 2 in the `report.pdf` file.
+- For the report, please proceed to `report.pdf`
+- For the deployed website, please proceed to https://aryanahadinia.github.io/flightdelay/
+- For the source code of the website, please proceed to https://github.com/AryanAhadinia/flightdelay
