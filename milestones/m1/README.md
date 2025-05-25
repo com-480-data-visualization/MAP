@@ -8,8 +8,6 @@
 
 (alphabetical order)
 
-[Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
-
 ## Milestone 1 (21st March, 5pm)
 
 delay
@@ -18,7 +16,7 @@ delay
 noun
     The nightmare of flyers.
 
-![Queue of Aircrafts](cover_image.webp)
+![Queue of Aircrafts](../../assets/cover_image.webp)
 
 copyright for [Pilot Bible](https://pilotbible.com/atc-slots-ready-message/)
 
@@ -122,32 +120,8 @@ We confirm that non of us has worked with this data before and this is our first
 
 *References:*
 
-
-[1]: Akachouche, Chafik. (2024). Flight analyzes data from 2009 to 2018 using PowerBI. 10.13140/RG.2.2.26957.96480. 
-
+[1]: Akachouche, Chafik. (2024). Flight analyzes data from 2009 to 2018 using PowerBI. 10.13140/RG.2.2.26957.96480.
 
 [2] Carvalho, L., Sternberg, A., Maia Gonçalves, L., Beatriz Cruz, A., Soares, J. A., Brandão, D., Carvalho, D., & Ogasawara, E. (2020). On the relevance of data science for flight delay research: A systematic review. Transport Reviews, 41(4), 499–528. https://doi.org/10.1080/01441647.2020.1861123.
 
 [3] Wu, Y., Yang, H., Lin, Y., & Liu, H. (2022). Spatiotemporal Propagation Learning for Network-Wide Flight Delay Prediction. arXiv preprint arXiv:2207.06959. Retrieved from https://arxiv.org/abs/2207.06959.
-
-
-## Milestone 2 (18th April, 5pm)
-
-**10% of the final grade**
-
-- For the report, please proceed to `./m2/report.pdf`
-- For the deployed website, please proceed to https://aryanahadinia.github.io/flightdelay/
-- For the source code of the website, please proceed to https://github.com/AryanAhadinia/flightdelay
-
-
-
-## Milestone 3 (30th May, 5pm)
-
-**80% of the final grade**
-
-
-## Late policy
-
-- < 24h: 80% of the grade for the milestone
-- < 48h: 70% of the grade for the milestone
-
