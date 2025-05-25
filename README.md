@@ -6,7 +6,7 @@ delay
 noun
     The nightmare of flyers.
 
-![Queue of Aircrafts](assets/cover_image.webp)
+![A queue of airplanes waiting for take-off](assets/cover_image.webp)
 
 copyright for [Pilot Bible](https://pilotbible.com/atc-slots-ready-message/)
 
@@ -19,6 +19,12 @@ copyright for [Pilot Bible](https://pilotbible.com/atc-slots-ready-message/)
 | Seyed Parsa Neshaei | 355567 |
 
 (alphabetical order)
+
+## Final Deliverables
+
+- [Website]()
+- [Process Book]()
+- [Screen Cast]()
 
 ## Structure of the Repository
 
@@ -55,9 +61,3 @@ The repository is holding the structure of our react project. This is mainly for
     ```bash
 
     ```
-
-## Final Deliverables
-
-- [Website]()
-- [Process Book]()
-- [Screen Cast]()
