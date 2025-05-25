@@ -6,7 +6,7 @@ delay
 noun
     The nightmare of flyers.
 
-![Queue of Aircrafts](cover_image.webp)
+![Queue of Aircrafts](assets/cover_image.webp)
 
 copyright for [Pilot Bible](https://pilotbible.com/atc-slots-ready-message/)
 
