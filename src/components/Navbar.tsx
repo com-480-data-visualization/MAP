@@ -47,8 +47,8 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <span className="logo-icon">✈️</span>
-          <span className="logo-text">FlightDelays</span>
+          <span className="logo-icon">🇺🇸 ✈️</span>
+          <span className="logo-text">Flight Delays</span>
         </div>
 
         <div className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
