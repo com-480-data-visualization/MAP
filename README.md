@@ -59,5 +59,5 @@ The repository is holding the structure of our react project. This is mainly for
 3. Push the built project to the `gh-pages` branch for deployment.
 
     ```bash
-
+    npm run deploy
     ```
