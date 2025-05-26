@@ -50,10 +50,10 @@ Just copy and paste following commands into your terminal.
 
 
 ```bash
-git clone https://github.com/com-480-data-visualization/MAP  # (1) clone the repo 
-cd MAP                                                       # (2) go to the repo
-npm install                                                  # (3) install the dependencies
-npm run dev                                                  # (4) run the project in development mode
+git clone https://github.com/com-480-data-visualization/MAP
+cd MAP
+npm install
+npm run dev
 ```
 
 The project will (most likely) start in <http://localhost:5173/MAP/> (if the `5173` port of your system is free).
@@ -65,8 +65,8 @@ We are using GitHub Pages for hosting our project. Follow the following instruct
 1. **COMMIT** and **PUSH** the state of the project you want to deploy.
 
    ```bash
-   git add --all                                             # or stage only the desired files
-   git commit -m "your commit message"                       # write a meaningful commit message
+   git add --all
+   git commit -m "your commit message"
    git push origin
    ```
 
