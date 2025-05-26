@@ -34,7 +34,17 @@ The repository is holding the structure of our react project. This is mainly for
 - [Milestone 2](./milestones/m2)
 - [Milestone 3](./milestones/m3)
 
-## Quick Setup
+## How to Run
+
+### Prerequisite
+
+1. Git
+2. Node.js
+3. NPM
+
+The project is tested with node version 22.14.0 and npm version 11.2.0 on macOS 15.5.
+
+### Quick Setup
 
 Just copy and paste following commands into your terminal.
 
@@ -48,9 +58,7 @@ npm run dev                                                  # (4) run the proje
 
 The project will (most likely) start in <http://localhost:5173/MAP/> (if the `5173` port of your system is free).
 
-## Deployment
-
-### GitHub Pages
+### Deployment
 
 We are using GitHub Pages for hosting our project. Follow the following instruction.
 
@@ -58,7 +66,7 @@ We are using GitHub Pages for hosting our project. Follow the following instruct
 
    ```bash
    git add --all                                             # (1) stage all changes
-   git commit -m < you commit message >
+   git commit -m "your commit message"
    git push origin
    ```
 
@@ -68,6 +76,20 @@ We are using GitHub Pages for hosting our project. Follow the following instruct
    npm run deploy
    ```
 
-## Data Processing
+## Data Preparation
 
 TODO
+
+## Tech Stack
+
+<div align="center">
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/github.png" alt="GitHub" title="GitHub"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/html.png" alt="HTML" title="HTML"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/css.png" alt="CSS" title="CSS"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png" alt="JavaScript" title="JavaScript"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/react.png" alt="React" title="React"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/typescript.png" alt="TypeScript" title="TypeScript"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/npm.png" alt="npm" title="npm"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/node_js.png" alt="Node.js" title="Node.js"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/vite.png" alt="Vite" title="Vite"/></code>
+</div>
