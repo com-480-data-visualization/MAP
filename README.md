@@ -61,3 +61,7 @@ The repository is holding the structure of our react project. This is mainly for
     ```bash
     npm run deploy
     ```
+
+## Data Processing
+
+TODO
