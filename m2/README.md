@@ -1,3 +1,0 @@
-- For the report, please proceed to `report.pdf`
-- For the deployed website, please proceed to https://aryanahadinia.github.io/flightdelay/
-- For the source code of the website, please proceed to https://github.com/AryanAhadinia/flightdelay
