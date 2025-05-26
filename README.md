@@ -34,27 +34,39 @@ The repository is holding the structure of our react project. This is mainly for
 - [Milestone 2](./milestones/m2)
 - [Milestone 3](./milestones/m3)
 
-## How to Run
+## Quick Setup
 
-1. Clone the repository.
+Just copy and paste following commands into your terminal.
 
-    ```bash
-    git clone https://github.com/com-480-data-visualization/MAP
-    ```
 
-2. Run the project for development.
+```bash
+git clone https://github.com/com-480-data-visualization/MAP  # (1) clone the repo 
+cd MAP                                                       # (2) go to the repo
+npm install                                                  # (3) install the dependencies
+npm run dev                                                  # (4) run the project in development mode
+```
 
-    ```bash
-    cd MAP
-    npm install
-    npm run dev
-    ```
+The project will (most likely) start in <http://localhost:5173/MAP/> (if the `5173` port of your system is free).
 
-3. Push the built project to the `gh-pages` branch for deployment.
+## Deployment
 
-    ```bash
-    npm run deploy
-    ```
+### GitHub Pages
+
+We are using GitHub Pages for hosting our project. Follow the following instruction.
+
+1. **COMMIT** and **PUSH** the state of the project you want to deploy.
+
+   ```bash
+   git add --all                                             # (1) stage all changes
+   git commit -m < you commit message >
+   git push origin
+   ```
+
+2. Deploy the porject using the following command.
+
+   ```bash
+   npm run deploy
+   ```
 
 ## Data Processing
 
