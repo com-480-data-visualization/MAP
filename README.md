@@ -12,11 +12,11 @@ copyright for [Pilot Bible](https://pilotbible.com/atc-slots-ready-message/)
 
 ## Students
 
-| Student's name      | SCIPER |
-| ------------------- | ------ |
-| Aryan Ahadinia      | 387868 |
-| Matin Ansaripour    | 370664 |
-| Seyed Parsa Neshaei | 355567 |
+| Student's name      | SCIPER | Affiliation        |
+| :-----------------: | ------ | :----------------: |
+| Aryan Ahadinia      | 387868 | Master of CS, EPFL |
+| Matin Ansaripour    | 370664 | Master of CS, EPFL |
+| Seyed Parsa Neshaei | 355567 | EDIC, EPFL         |
 
 (alphabetical order)
 
