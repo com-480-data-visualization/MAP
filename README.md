@@ -52,7 +52,7 @@ The repository is holding the structure of our react project. This is mainly for
 
     ```bash
     cd 
-    npm install --legacy-peer-deps
+    npm install
     npm run dev
     ```
 
