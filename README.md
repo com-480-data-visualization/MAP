@@ -1,6 +1,6 @@
 # Project of Data Visualization (COM-480)
 
-delay
+delay ✈️
 /dɪˈleɪ/
 
 noun
@@ -10,7 +10,7 @@ noun
 
 copyright for [Pilot Bible](https://pilotbible.com/atc-slots-ready-message/)
 
-## Students
+## Students 🧑‍🎓
 
 | Student's name                                                       | SCIPER | Affiliation        | Contact                    |
 | :------------------------------------------------------------------: | ------ | :----------------: | :------------------------: |
@@ -20,13 +20,13 @@ copyright for [Pilot Bible](https://pilotbible.com/atc-slots-ready-message/)
 
 (alphabetical order)
 
-## Final Deliverables
+## Final Deliverables 🚚
 
-- [Website](https://com-480-data-visualization.github.io/MAP/)
-- [Process Book]()
-- [Screen Cast]()
+- [Website](https://com-480-data-visualization.github.io/MAP/) 🕸️
+- [Process Book]() 📖
+- [Screen Cast]() 📽️
 
-## Structure of the Repository
+## Structure of the Repository 🏛️
 
 The repository is holding the structure of our react project. This is mainly for easy deployment. The assets of each milestones are included in the following directories.
 
@@ -34,9 +34,9 @@ The repository is holding the structure of our react project. This is mainly for
 - [Milestone 2](./milestones/m2)
 - [Milestone 3](./milestones/m3)
 
-## How to Run
+## How to Run 🏃‍♀️
 
-### Prerequisite
+### Prerequisite 🛠️
 
 1. Git
 2. Node.js
@@ -44,7 +44,7 @@ The repository is holding the structure of our react project. This is mainly for
 
 The project is tested with node version 22.14.0 and npm version 11.2.0 on macOS 15.5.
 
-### Quick Setup
+### Quick Setup 🚀
 
 Just copy and paste following commands into your terminal.
 
@@ -58,15 +58,15 @@ npm run dev                                                  # (4) run the proje
 
 The project will (most likely) start in <http://localhost:5173/MAP/> (if the `5173` port of your system is free).
 
-### Deployment
+### Deployment 🎤
 
 We are using GitHub Pages for hosting our project. Follow the following instruction.
 
 1. **COMMIT** and **PUSH** the state of the project you want to deploy.
 
    ```bash
-   git add --all                                             # (1) stage all changes
-   git commit -m "your commit message"
+   git add --all                                             # or stage only the desired files
+   git commit -m "your commit message"                       # write a meaningful commit message
    git push origin
    ```
 
@@ -76,11 +76,11 @@ We are using GitHub Pages for hosting our project. Follow the following instruct
    npm run deploy
    ```
 
-## Data Preparation
+## Data Preparation 🧐
 
 TODO
 
-## Tech Stack
+## Tech Stack 🧑‍💻
 
 <div align="center">
 	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/github.png" alt="GitHub" title="GitHub"/></code>
