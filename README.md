@@ -39,13 +39,7 @@ The repository is holding the structure of our react project. This is mainly for
 1. Clone the repository.
 
     ```bash
-    git clone https://github.com/com-480-data-visualization/project-2023-data-visionaries.git
-    ```
-
-    or via SSH:
-
-    ```bash
-    git clone git@github.com:com-480-data-visualization/project-2023-data-visionaries.git
+    git clone https://github.com/com-480-data-visualization/MAP
     ```
 
 2. Run the project for development.
