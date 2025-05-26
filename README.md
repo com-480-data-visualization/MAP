@@ -51,7 +51,7 @@ The repository is holding the structure of our react project. This is mainly for
 2. Run the project for development.
 
     ```bash
-    cd 
+    cd MAP
     npm install
     npm run dev
     ```
