@@ -52,7 +52,7 @@ const LeaderboardBarChart: React.FC<LeaderboardBarChartProps> = ({
     
     const sortedData = [...leaderboardData].sort((a, b) => {
       return sortOrder === 'asc' ? a.delay - b.delay : b.delay - a.delay;
-    });
+    }).filter(d => d.delay > 0);
 
     const containerWidth = svgRef.current.parentElement?.clientWidth || 800;
     const barHeight = 55;
