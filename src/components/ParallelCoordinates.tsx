@@ -3,7 +3,6 @@ import * as d3 from 'd3';
 import './ParallelCoordinates.css';
 import ItemSelector from './utils/Selector/ItemSelector/ItemSelector';
 import AirportAirlineSelector from './utils/AirportAirlineSelector/AirportAirlineSelector';
-import { FaTrash } from 'react-icons/fa';
 
 interface AirlineData {
   Airline: string;
@@ -361,12 +360,6 @@ const ParallelCoordinates: React.FC = () => {
       });
 
   }, [data, selectedRanges]);
-
-  const clearAllBrushes = useCallback(() => {
-    Object.keys(brushesRef.current).forEach(dimensionKey => {
-      clearBrush(dimensionKey);
-    });
-  }, [clearBrush]);
 
   useEffect(() => {
     if (dataType === 'airlines') {
