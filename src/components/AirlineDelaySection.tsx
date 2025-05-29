@@ -179,7 +179,7 @@ const AirlineDelaySection: React.FC = () => {
           You can <b>select</b> the airlines or airports you want to compare, and see how their delays change over time. For example, let's try comparing Delta, American, and United airlines! To do so, first de-select the five selected airlines by clicking the blue rows, then search for the three airlines in the search bar and select them.
         </p>
         <p>
-          By following the comparison above over time, we see that there is <b>no significant difference</b> in the delays of these three airlines. However, certain patterns emerge; for example, there is almost no <b>🔒 Security</b> delay for any of the airlines, with some exceptions, e.g., in November 2013. The majority of the delays are caused by the reasons <b>✈️ Carrier</b> and <b>🕒 Late Aircraft</b>, while <b>🌤️ Weather</b> contributes to a smaller portion of the delays.
+          By following the comparison above over time, we see that there is <b>no significant difference</b> in the delays of these three airlines. However, certain patterns emerge; for example, there is almost no <b>🔒 Security</b> delay for any of these airlines, with some exceptions, e.g., in November 2013. The majority of the delays are caused by the reasons <b>✈️ Carrier</b> and <b>🕒 Late Aircraft</b>, while <b>🌤️ Weather</b> contributes to a smaller portion of the delays.
         </p>
       </div>
       <div className={`airline-delay-section`}>

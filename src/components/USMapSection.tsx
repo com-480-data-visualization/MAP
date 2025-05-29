@@ -321,7 +321,7 @@ const USMapSection: React.FC = () => {
         <div className="usmap-text">
           <h2>Delays on the Map 🗺️</h2>
           <p>
-           Let's take a quick look at the flight delays of different airports across the United States. Use the <b>full screen button</b> on the top right corner to <b>start interacting</b> with the map. The size of circles show the number of flights, while the colors (<b><span style={{ color: '#00cc00' }}>low</span>, <span style={{ color: '#99cc00' }}>medium</span>, <span style={{ color: '#ffcc00' }}>high</span>, <span style={{ color: '#cc0000' }}>very high</span></b>) show the delay. Feel free to zoom and then click on an airport to see its details, including delay trend over time.
+           Let's take a quick look at the flight delays of different airports across the United States. Use the <b>full screen button</b> on the top right corner to <b>start interacting</b> with the map. The size of circles show the number of flights, while the colors (<b><span style={{ color: '#00cc00' }}>low</span>, <span style={{ color: '#99cc00' }}>medium</span>, <span style={{ color: '#ffcc00' }}>high</span>, <span style={{ color: '#cc0000' }}>very high</span></b>) indicate the delay. Feel free to zoom using the designated buttons on the bottom right on the screen, and then click on an airport to see its details, including delay trend over time.
           </p>
           <p>
             <i><b>Bonus:</b></i> clicking on an airport in the <b>full screen</b> mode will also show you the <b>routes</b> that are connected to it, and you can see the delays of those routes as well using the same colors. Give it a try!
