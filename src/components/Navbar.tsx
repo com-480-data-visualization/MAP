@@ -82,6 +82,13 @@ const Navbar: React.FC = () => {
             Airline Delays
           </a>
           <a
+            href="#parallel-coordinates"
+            className={`navbar-item ${activeSection === 'parallel-coordinates' ? 'active' : ''}`}
+            onClick={handleLinkClick}
+          >
+            Parallel Coordinates
+          </a>
+          <a
             href="#chord"
             className={`navbar-item ${activeSection === 'chord' ? 'active' : ''}`}
             onClick={handleLinkClick}
@@ -116,4 +123,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;

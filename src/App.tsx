@@ -7,6 +7,7 @@ import AirlineDelaySection from './components/AirlineDelaySection';
 import Navbar from './components/Navbar';
 import './App.css';
 import LeaderboardSection from './components/LeaderboardSection';
+import ParallelCoordinatesSection from './components/ParallelCoordinatesSection';
 
 const App: React.FC = () => {
   return (
@@ -27,6 +28,10 @@ const App: React.FC = () => {
 
       <section id="airline-delay" className="content-section">
         <AirlineDelaySection />
+      </section>
+
+      <section id="parallel-coordinates" className="content-section">
+        <ParallelCoordinatesSection />
       </section>
 
       <section id="chord" className="content-section">
