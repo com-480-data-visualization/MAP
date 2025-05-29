@@ -68,11 +68,11 @@ const Navbar: React.FC = () => {
             US Map
           </a>
           <a
-            href="#chord"
-            className={`navbar-item ${activeSection === 'chord' ? 'active' : ''}`}
+            href="#leaderboard"
+            className={`navbar-item ${activeSection === 'leaderboard' ? 'active' : ''}`}
             onClick={handleLinkClick}
           >
-            Routes
+            Leaderboard
           </a>
           <a
             href="#airline-delay"
@@ -82,11 +82,11 @@ const Navbar: React.FC = () => {
             Airline Delays
           </a>
           <a
-            href="#leaderboard"
-            className={`navbar-item ${activeSection === 'leaderboard' ? 'active' : ''}`}
+            href="#chord"
+            className={`navbar-item ${activeSection === 'chord' ? 'active' : ''}`}
             onClick={handleLinkClick}
           >
-            Leaderboard
+            Routes
           </a>
           <a
             href="#team"
