@@ -1,0 +1,49 @@
+.parallel-coordinates-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.section-content {
+  width: 100%;
+  text-align: left;
+}
+
+.section-header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.section-header {
+  width: 70%;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.section-header h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.section-header p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.parallel-coordinates-container {
+  padding-top: 0;
+  min-height: auto;
+}
