@@ -20,17 +20,17 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  width: 80%;
+  width: 70%;
 }
 
 .delay-section-content h2 {
-  font-size: 28px;
+  font-size: 35px;
   margin-bottom: 16px;
   color: #333;
 }
 
 .delay-section-content p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
   color: #555;
   margin-bottom: 12px;
