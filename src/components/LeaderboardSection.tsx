@@ -29,7 +29,7 @@ const LeaderboardSection: React.FC = () => {
   const dateRange = {
     min: new Date(2009, 0, 1),
     max: new Date(2018, 11, 1),
-    default: new Date(2009, 5, 1)
+    default: new Date(2010, 2, 1)
   };
 
   const [selectedDate, setSelectedDate] = useState<Date>(dateRange.default);
