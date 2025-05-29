@@ -424,7 +424,7 @@ const ParallelCoordinates: React.FC = () => {
   return (
     <div className="parallel-coordinates-container">
       <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
-        <div className="parallel-coordinates-selector-wrapper" style={{ width: '300px', flexShrink: 0 }}>
+        <div className="parallel-coordinates-selector-wrapper">
           <div style={{ marginLeft: -20, marginBottom: 15 }}>
             <AirportAirlineSelector
               options={dataTypeOptions}
@@ -466,7 +466,7 @@ const ParallelCoordinates: React.FC = () => {
             />
           )}
         </div>
-        <div style={{ flex: 1 }}>
+        <div>
           <div className="visualization-container">
             <svg
               ref={svgRef}
