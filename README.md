@@ -36,7 +36,7 @@ The repository is holding the structure of our react project. This is mainly for
 
 ## How to Run 🏃‍♀️
 
-### Prerequisite 🛠️
+### Prerequisites 🛠️
 
 1. Git
 2. Node.js
@@ -47,7 +47,6 @@ The project is tested with node version 22.14.0 and npm version 11.2.0 on macOS 
 ### Quick Setup 🚀
 
 Just copy and paste following commands into your terminal.
-
 
 ```bash
 git clone https://github.com/com-480-data-visualization/MAP
@@ -82,7 +81,7 @@ Data is already preprocessed and served in the website, however, you can follow 
 
 Data Source: <https://www.kaggle.com/datasets/yuanyuwendymu/airline-delay-and-cancellation-data-2009-2018>.
 
-### Prerequisite 🛠️
+### Data Preparations Prerequisites 🛠️
 
 You need followings installed and ready-to-use on your system.
 
@@ -95,24 +94,26 @@ You need followings installed and ready-to-use on your system.
 1. Download the dataset from Kaggle and unzip it.
 
    - create directories.
-     
+
      ```bash
      mkdir milestones/m3/analysis/data
      cd milestones/m3/analysis/data
      ```
 
    - download the data from Kaggle.
-     
+
      ```bash
      kaggle datasets download yuanyuwendymu/airline-delay-and-cancellation-data-2009-2018
      ```
 
    - unzip the data.
+
      ```bash
      unzip airline-delay-and-cancellation-data-2009-2018.zip
      ```
 
    - clean up.
+
      ```bash
      rm airline-delay-and-cancellation-data-2009-2018.zip
      cd ../../../..
