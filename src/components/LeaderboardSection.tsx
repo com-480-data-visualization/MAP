@@ -6,12 +6,6 @@ import TimeSlider from './utils/TimeSlider/TimeSlider';
 import AirportAirlineSelector from './utils/AirportAirlineSelector/AirportAirlineSelector';
 import './LeaderboardSection.css';
 
-const dateRange = {
-  min: new Date(2009, 0, 1),
-  max: new Date(2018, 11, 1),
-  default: new Date(2009, 0, 1)
-};
-
 interface DataEntry {
   Year: string;
   Month: string;
@@ -31,6 +25,12 @@ const LeaderboardSection: React.FC = () => {
   const [airportsData, setAirportsData] = useState<DataEntry[]>([]);
   const [airlineNames, setAirlineNames] = useState<Map<string, string>>(new Map());
   const [airportNames, setAirportNames] = useState<Map<string, string>>(new Map());
+
+  const dateRange = {
+    min: new Date(2009, 0, 1),
+    max: new Date(2018, 11, 1),
+    default: new Date(2009, 5, 1)
+  };
 
   const [selectedDate, setSelectedDate] = useState<Date>(dateRange.default);
   const [dataType, setDataType] = useState<'airlines' | 'airports'>('airlines');
@@ -191,15 +191,22 @@ const LeaderboardSection: React.FC = () => {
     <div className={`leaderboard-section ${isFullscreen ? 'fullscreen' : ''}`}>
       <div className="leaderboard-section-content">
         <div className="leaderboard-section-text">
-          <h2>Delay Leaderboard</h2>
+          <h2>Leaderboard 🏆</h2>
           <p>
-            Explore the top performers and worst performers in flight delays. This leaderboard shows:
+            Now, let's get a bit of a competitive spirit! This plot shows the <b>leaderboard</b> of the top airlines and airports based on their average flight delays.
           </p>
-          <ul>
-            <li>Toggle between Airlines and Airports rankings</li>
-            <li>Sort by best (ascending) or worst (descending) delays</li>
-            <li>Visual color coding based on delay severity</li>
-          </ul>
+          <p>
+            Similar to before, first click on the <b>full screen button</b> to see the full leaderboard. You can then choose to see the leaderboards of either <b>airlines</b> or <b>airports</b>. If you want to know about the dark side (🙈) of the flight industry, you can also <b>sort</b> the leaderboard by the <b>worst delays</b>!
+          </p>
+          <p>
+            <b><i>Bonus:</i></b> click on the <b>play button</b> to see how the leaderboard changes over time! It's gonna be a fun observation 😄
+          </p>
+          <p>
+            Seeing the leaderboard over time shows an interesting fact: the <b>Hawaiian</b> and to a lesser extend <b>Alaska</b> airlines are consistently near the top of the leaderboard with having very low average delays, both of which <b>do not</b> have their center in the <b>mainland US</b>. This can be likely due to the fact that these airlines operate in routes with fewer connections and less congestion compared to mainland airlines.
+          </p>
+          <p>
+            On the other hand, we see <b>Comair</b>, <b>Frontier</b>, and <b>JetBlue</b> being mostly among the worst airlines in terms of delays. Interestingly, when it comes to <b>airports</b>, we do not observe any consistent pattern, with regional airports being both among the best and worst performers.
+          </p>   
         </div>
 
         <div className="leaderboard-section-visualization">

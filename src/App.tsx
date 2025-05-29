@@ -21,16 +21,16 @@ const App: React.FC = () => {
         <USMapSection />
       </section>
 
-      <section id="chord" className="content-section">
-        <ChordSection />
+      <section id="leaderboard" className="content-section">
+        <LeaderboardSection />
       </section>
 
       <section id="airline-delay" className="content-section">
         <AirlineDelaySection />
       </section>
 
-      <section id="leaderboard" className="content-section">
-        <LeaderboardSection />
+      <section id="chord" className="content-section">
+        <ChordSection />
       </section>
 
       <section id="team" className="content-section">

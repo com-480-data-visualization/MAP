@@ -71,6 +71,7 @@
 
 .usmap-text h2 {
   margin-top: 0;
+  margin-bottom: 20px;
   color: #333;
   font-size: 2rem;
 }
@@ -79,6 +80,7 @@
   color: #555;
   line-height: 1.6;
   font-size: 1rem;
+  margin-bottom: 20px;
 }
 
 .usmap-visualization {

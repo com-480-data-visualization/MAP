@@ -62,7 +62,7 @@ const AirlineDelaySection: React.FC = () => {
       });
     });
   }, []);
-  
+
   useEffect(() => {
     if (airlinesRawData.length <= 0 || selectedAirlines.length <= 0 || airlineNames.size <= 0) {
       setFilteredAirlineData([]);
@@ -73,7 +73,7 @@ const AirlineDelaySection: React.FC = () => {
       return;
     }
     setFilteredAirlineData(selectedAirlines.map(code => {
-      const row = airlinesRawData.find(d => d.Airline === code && Number(d.Year)  === selectedDate.getFullYear() && Number(d.Month) === selectedDate.getMonth() + 1);
+      const row = airlinesRawData.find(d => d.Airline === code && Number(d.Year) === selectedDate.getFullYear() && Number(d.Month) === selectedDate.getMonth() + 1);
       return {
         airline: airlineNames.get(code) || code,
         weather: row ? Number(row.AverageDelay_WEATHER_DELAY) : 0,
@@ -85,7 +85,7 @@ const AirlineDelaySection: React.FC = () => {
     }));
 
     setFilteredAirportData(selectedAirports.map(code => {
-      const row = airportsRawData.find(d => d.IATA_CODE === code && Number(d.Year)  === selectedDate.getFullYear() && Number(d.Month) === selectedDate.getMonth() + 1);
+      const row = airportsRawData.find(d => d.IATA_CODE === code && Number(d.Year) === selectedDate.getFullYear() && Number(d.Month) === selectedDate.getMonth() + 1);
       return {
         airline: airportNames.get(code) || code,
         weather: row ? Number(row.AverageDelay_WEATHER_DELAY) : 0,
@@ -110,13 +110,13 @@ const AirlineDelaySection: React.FC = () => {
 
   const handleAirlineSelection = (code: string) => {
     setSelectedAirlines(prev => {
-        if (prev.includes(code)) {
-          return prev.filter(a => a !== code);
-        }
-        else {
-          return [...prev, code];
-        }
-      });
+      if (prev.includes(code)) {
+        return prev.filter(a => a !== code);
+      }
+      else {
+        return [...prev, code];
+      }
+    });
   }
 
   const handleAirportSelection = (code: string) => {
@@ -130,32 +130,32 @@ const AirlineDelaySection: React.FC = () => {
   };
 
   const stopAutoplay = useCallback(() => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-        intervalRef.current = null;
-      }
-      setIsPlaying(false);
-    }, []);
-  
-    const startAutoplay = useCallback(() => {
-      setIsPlaying(true);
-      intervalRef.current = window.setInterval(() => {
-        setSelectedDate(prev => {
-          const year = prev.getFullYear();
-          const month = prev.getMonth();
-          const current = ((year - CONFIG.DATE_RANGE.minDate.getFullYear()) * 12) + month;
-          const next = current + 1;
-          
-          return next >= CONFIG.DATE_RANGE.totalMonths 
-            ? CONFIG.DATE_RANGE.minDate 
-            : new Date(
-                Math.floor(next / 12) + CONFIG.DATE_RANGE.minDate.getFullYear(),
-                next % 12,
-                1
-              );
-        });
-      }, CONFIG.AUTOPLAY_INTERVAL);
-    }, [CONFIG.DATE_RANGE]);
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+    setIsPlaying(false);
+  }, []);
+
+  const startAutoplay = useCallback(() => {
+    setIsPlaying(true);
+    intervalRef.current = window.setInterval(() => {
+      setSelectedDate(prev => {
+        const year = prev.getFullYear();
+        const month = prev.getMonth();
+        const current = ((year - CONFIG.DATE_RANGE.minDate.getFullYear()) * 12) + month;
+        const next = current + 1;
+
+        return next >= CONFIG.DATE_RANGE.totalMonths
+          ? CONFIG.DATE_RANGE.minDate
+          : new Date(
+            Math.floor(next / 12) + CONFIG.DATE_RANGE.minDate.getFullYear(),
+            next % 12,
+            1
+          );
+      });
+    }, CONFIG.AUTOPLAY_INTERVAL);
+  }, [CONFIG.DATE_RANGE]);
 
   const toggleAutoplay = useCallback(() => {
     isPlaying ? stopAutoplay() : startAutoplay();
@@ -170,93 +170,111 @@ const AirlineDelaySection: React.FC = () => {
   };
 
   return (
-    <div className={`airline-delay-section ${isFullscreen ? 'fullscreen' : ''}`}>
-      <div className="airline-delay-header">
-        <h2>Delay Comparison</h2>
-        <button className="fullscreen-btn" onClick={toggleFullscreen}>
-          {isFullscreen ? <FaCompress /> : <FaExpand />}
-        </button>
+    <>
+      <div className='delay-section-content'>
+        <h2>Comparing Delays 📊</h2>
+        <p>
+          Let's do a <b>deeper dive</b> into comparing the delays and the different delay types!
+        </p>
+        <p>
+          In our dataset, five causes of delays are recorded, each with its own color in the bar chart:
+          <ul>
+            <li>🌤️ <b>Weather</b> - Delays caused by weather conditions.</li>
+            <li>✈️ <b>Carrier</b> - Delays caused by the airline's operations.</li>
+            <li>🛩️ <b>NAS</b> - Delays caused by the National Airspace System (NAS), which includes air traffic control and other system-wide factors, such as congestion, equipment outages, etc.</li>
+            <li>🔒 <b>Security</b> - Delays caused by security checks and procedures.</li>
+            <li>🕒 <b>Late Aircraft</b> - Delays caused by the previous flight of the aircraft.</li>
+          </ul>
+        </p>
+        <p>
+          You can <b>select</b> the airlines or airports you want to compare, and see how their delays change over time. For example, let's try comparing Delta, American, and United airlines! To do so, first de-select the five selected airlines by clicking the blue rows, then search for the three airlines in the search bar and select them.
+        </p>
+        <p>
+          By following the comparison above over time, we see that there is <b>no significant difference</b> in the delays of these three airlines. However, certain patterns emerge; for example, there is almost no <b>🔒 Security</b> delay for any of the airlines, with some exceptions, e.g., in November 2013. The majority of the delays are caused by the reasons <b>✈️ Carrier</b> and <b>🕒 Late Aircraft</b>, while <b>🌤️ Weather</b> contributes to a smaller portion of the delays.
+        </p>
       </div>
+      <div className={`airline-delay-section ${isFullscreen ? 'fullscreen' : ''}`}>
+        <div className="airline-delay-content">
+          <div className="airline-selection">
+            <div style={{ marginLeft: -20, marginBottom: 15 }}>
+              <AirportAirlineSelector
+                options={dataTypeOptions}
+                selectedValue={dataType}
+                onChange={(newValue) => {
+                  setDataType(newValue);
+                }}
+              />
+            </div>
 
-      <div className="airline-delay-content">
-        <div className="airline-selection">
-          <div style={{marginLeft: -20, marginBottom: 15}}>
-            <AirportAirlineSelector
-              options={dataTypeOptions}
-              selectedValue={dataType}
-              onChange={(newValue) => {
-                setDataType(newValue);
-              }}
-            />
+            {dataType === 'airlines' ?
+              <ItemSelector
+                availableItems={(availableAirlines).map(code => ({
+                  code: code,
+                  name: (airlineNames).get(code) || '',
+                  city: '',
+                  state: '',
+                  flightCount: 0,
+                }))}
+                selectedItems={(selectedAirlines).map(code => code)}
+                onItemToggle={handleAirlineSelection}
+                onClearAll={handleClearAllAirlines}
+                className="bar-plot-airport-selector"
+                isAirline={true}
+                hasClearButton={false}
+              />
+              :
+              <ItemSelector
+                availableItems={availableAirports.map(code => ({
+                  code: code,
+                  name: airportNames.get(code) || '',
+                  city: '',
+                  state: '',
+                  flightCount: 0,
+                }))}
+                selectedItems={selectedAirports.map(code => code)}
+                onItemToggle={handleAirportSelection}
+                onClearAll={handleClearAllAirports}
+                className="bar-plot-airport-selector"
+                isAirline={true} // to have consistency in appearance to airlines for this component
+                hasClearButton={false}
+              />
+            }
           </div>
 
-          { dataType === 'airlines' ? 
-            <ItemSelector
-              availableItems={(availableAirlines).map(code => ({
-                code: code,
-                name: (airlineNames).get(code) || '',
-                city: '',
-                state: '',
-                flightCount: 0,
-              }))}
-              selectedItems={(selectedAirlines).map(code => code)}
-              onItemToggle={handleAirlineSelection}
-              onClearAll={handleClearAllAirlines}
-              className="bar-plot-airport-selector"
-              isAirline={true}
-              hasClearButton={false}
-            />
-          :
-            <ItemSelector
-              availableItems={availableAirports.map(code => ({
-                code: code,
-                name: airportNames.get(code) || '',
-                city: '',
-                state: '',
-                flightCount: 0,
-              }))}
-              selectedItems={selectedAirports.map(code => code)}
-              onItemToggle={handleAirportSelection}
-              onClearAll={handleClearAllAirports}
-              className="bar-plot-airport-selector"
-              isAirline={true} // to have consistency in appearance to airlines for this component
-              hasClearButton={false}
-            />
-        }
+
+
+          <div className="airline-delay-visualization">
+            {dataType == "airlines" ?
+              <AirlineDelayBarChart
+                isFullscreen={isFullscreen}
+                airlineData={filteredAirlineData}
+                selectedAirlines={selectedAirlines}
+                airlineNames={airlineNames}
+              />
+              :
+              <AirlineDelayBarChart
+                isFullscreen={isFullscreen}
+                airlineData={filteredAirportData}
+                selectedAirlines={selectedAirports}
+                airlineNames={airportNames}
+              />
+            }
+          </div>
+
         </div>
 
-
-        
-        <div className="airline-delay-visualization">
-          { dataType == "airlines" ?
-            <AirlineDelayBarChart
-              isFullscreen={isFullscreen}
-              airlineData={filteredAirlineData}
-              selectedAirlines={selectedAirlines}
-              airlineNames={airlineNames}
-            />
-          :
-            <AirlineDelayBarChart
-              isFullscreen={isFullscreen}
-              airlineData={filteredAirportData}
-              selectedAirlines={selectedAirports}
-              airlineNames={airportNames}
-            />
-          }
-        </div>
-
+        <TimeSlider
+          selectedDate={selectedDate}
+          minDate={CONFIG.DATE_RANGE.minDate}
+          maxDate={CONFIG.DATE_RANGE.maxDate}
+          totalMonths={CONFIG.DATE_RANGE.totalMonths}
+          onDateChange={handleDateChange}
+          isPlaying={isPlaying}
+          onToggleAutoplay={toggleAutoplay}
+        />
       </div>
+    </>
 
-      <TimeSlider
-        selectedDate={selectedDate}
-        minDate={CONFIG.DATE_RANGE.minDate}
-        maxDate={CONFIG.DATE_RANGE.maxDate}
-        totalMonths={CONFIG.DATE_RANGE.totalMonths}
-        onDateChange={handleDateChange}
-        isPlaying={isPlaying}
-        onToggleAutoplay={toggleAutoplay}
-      />
-    </div>
   );
 };
 

@@ -319,11 +319,15 @@ const USMapSection: React.FC = () => {
     >
       <div className="usmap-content">
         <div className="usmap-text">
-          <h2>Proof of Concept: Map Visualization</h2>
+          <h2>Delays on the Map 🗺️</h2>
           <p>
-            This is a proof of concept for the map component of the project.
-            Due to the geographic nature of the data, it is necessary to visualize the data on a map.
-            Click on the bottom of top-right corner of the map to enter fullscreen mode.
+           Let's take a quick look at the flight delays of different airports across the United States. Use the <b>full screen button</b> on the top right corner to <b>start interacting</b> with the map. The size of circles show the number of flights, while the colors (<b><span style={{ color: '#00cc00' }}>low</span>, <span style={{ color: '#99cc00' }}>medium</span>, <span style={{ color: '#ffcc00' }}>high</span>, <span style={{ color: '#cc0000' }}>very high</span></b>) show the delay. Feel free to zoom and then click on an airport to see its details, including delay trend over time.
+          </p>
+          <p>
+            <i><b>Bonus:</b></i> clicking on an airport in the <b>full screen</b> mode will also show you the <b>routes</b> that are connected to it, and you can see the delays of those routes as well using the same colors. Give it a try!
+          </p>
+          <p>
+            The map shows a highly variable distribution of delays across the US over time. However, a more clear pattern can be seen when you look at the size of the circles; airports such as <i>Hartsfield-Jackson Atlanta International Airport</i> (<b>ATL</b>) and <i>Chicago O'Hare International Airport</i> (<b>ORD</b>) have a significantly higher number of flights compared to others. Also, with the possible exception of <i>Denver International Airport</i> (<b>DEN</b>), most of the airports in the center of the US have a lower number of flights, which is likely due to the fact that they are not major hubs.
           </p>
         </div>
 
