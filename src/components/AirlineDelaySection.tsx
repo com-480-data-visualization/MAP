@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import './AirlineDelaySection.css';
-import { FaExpand, FaCompress } from 'react-icons/fa';
 import * as d3 from 'd3';
 import AirlineDelayBarChart from './AirlineDelayBarChart';
 import ItemSelector from './utils/Selector/ItemSelector/ItemSelector';
@@ -96,15 +95,6 @@ const AirlineDelaySection: React.FC = () => {
       };
     }));
   }, [selectedDate, selectedAirlines, airlinesRawData, airlineNames, selectedAirports, airportsRawData, airportNames, dataType]);
-
-  const toggleFullscreen = () => {
-    setIsFullscreen(!isFullscreen);
-    if (isFullscreen) {
-      document.body.style.overflow = "auto";
-    } else {
-      document.body.style.overflow = "hidden";
-    }
-  };
 
   const handleDateChange = useCallback((date: Date) => setSelectedDate(date), []);
 
