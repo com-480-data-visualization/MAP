@@ -11,6 +11,12 @@
   color: #333;
 }
 
+.image-disclaimer {
+  text-align: center;
+  font-size: 80%;
+  color: #888;
+}
+
 .team-content {
   display: flex;
   flex-direction: column;

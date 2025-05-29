@@ -16,11 +16,34 @@
   padding: 20px;
 }
 
-.airline-delay-header {
+.delay-section-content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+  flex-direction: column;
+  text-align: left;
+  width: 80%;
+}
+
+.delay-section-content h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.delay-section-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.delay-section-content ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.delay-section-content li {
+  list-style: none;
+  line-height: 200%;
 }
 
 .airline-delay-header h2 {
