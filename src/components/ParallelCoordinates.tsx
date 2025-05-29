@@ -479,13 +479,6 @@ const ParallelCoordinates: React.FC = () => {
               className="tooltip"
               style={{ opacity: 0 }}
             />
-            <button 
-              className="clear-filters-icon" 
-              onClick={clearAllBrushes}
-              title="Clear all filters"
-            >
-              <FaTrash />
-            </button>
           </div>
         </div>
       </div>
