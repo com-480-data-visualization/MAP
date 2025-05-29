@@ -100,7 +100,7 @@ const FlightGlobe: React.FC = () => {
                 ref={globeEl}
                 width={dimensions.width}
                 height={dimensions.height}
-                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+                globeImageUrl="earth-night.jpg"
                 backgroundColor="rgba(0,0,0,0)"
                 arcsData={arcsData}
                 arcColor={() => 'rgba(255, 255, 255, 0.7)'}
