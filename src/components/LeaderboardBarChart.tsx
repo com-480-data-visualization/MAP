@@ -193,9 +193,12 @@ const LeaderboardBarChart: React.FC<LeaderboardBarChartProps> = ({
     const labelsEnter = labels.enter()
       .append("text")
       .attr("class", "label")
-      .attr("x", 15)
+      .attr("x", d => {
+        const barWidth = xScale(d.delay);
+        return barWidth < 70 ? barWidth + 12 : 15;
+      })
       .attr("dy", "0.35em")
-      .style("font-size", "16px")
+      .style("font-size", "15px")
       .style("font-weight", "600")
       .style("fill", "#1e293b")
       .style("font-family", "'Inter', -apple-system, BlinkMacSystemFont, sans-serif")
@@ -206,9 +209,14 @@ const LeaderboardBarChart: React.FC<LeaderboardBarChartProps> = ({
     allLabels
       .transition()
       .duration(800)
+      .attr("x", d => {
+        const barWidth = xScale(d.delay);
+        const caption = d.name.replace(/Inc./g, "").replace(/International/g, "Int'l").replace(/Airport/g, "").replace(" )", ")") + ": " + d.delay.toFixed(1) + " min";
+        return barWidth < caption.length * 6 ? barWidth + 12 : 15;
+      })
       .attr("y", (_, i) => (yScale(i.toString()) || 0) + yScale.bandwidth() / 2)
       .style("opacity", 1)
-      .text(d => d.name)
+      .text(d => d.name.replace(/Inc./g, "").replace(/International/g, "Int'l").replace(/Airport/g, "").replace(" )", ")") + ": " + d.delay.toFixed(1) + " min")
       .each(function(d, _) {
         const textElement = this as SVGTextElement;
         const barWidth = xScale(d.delay) - 30;
@@ -226,35 +234,6 @@ const LeaderboardBarChart: React.FC<LeaderboardBarChartProps> = ({
           }
         }
       });
-
-    const valueLabels = chart.selectAll<SVGTextElement, typeof sortedData[0]>(".value-label")
-      .data(sortedData, (d: any) => d.code);
-
-    valueLabels.exit()
-      .transition()
-      .duration(600)
-      .style("opacity", 0)
-      .remove();
-
-    const valueLabelsEnter = valueLabels.enter()
-      .append("text")
-      .attr("class", "value-label")
-      .attr("dy", "0.35em")
-      .style("font-size", "15px")
-      .style("font-weight", "600")
-      .style("fill", "#475569")
-      .style("font-family", "'SF Mono', Monaco, 'Cascadia Code', monospace")
-      .style("opacity", 0);
-
-    const allValueLabels = valueLabelsEnter.merge(valueLabels);
-    
-    allValueLabels
-      .transition()
-      .duration(800)
-      .attr("x", d => xScale(d.delay) + 12)
-      .attr("y", (_, i) => (yScale(i.toString()) || 0) + yScale.bandwidth() / 2)
-      .style("opacity", 1)
-      .text(d => `${d.delay.toFixed(1)}min`);
 
     let xAxisGroup = chart.select<SVGGElement>(".x-axis-group");
     if (xAxisGroup.empty()) {
