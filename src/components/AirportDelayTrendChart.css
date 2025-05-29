@@ -8,15 +8,6 @@
   margin-bottom: 10px;
 }
 
-.airport-delay-trend-chart {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 14px;
-  color: #666;
-}
-
 .airport-delay-trend-chart svg {
   display: block;
   width: 100%;
