@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
 import './AirportDelayTrendChart.css';
 
@@ -12,13 +12,13 @@ interface AirportDelayTrendChartProps {
 const AirportDelayTrendChart: React.FC<AirportDelayTrendChartProps> = ({ airportCode, airportsMapsRawData, color, selectedDate }) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (!svgRef.current) return; 
     if (!containerRef.current) return; 
     if (airportsMapsRawData.length <= 0) return;
-    setLoading(true);
+    // setLoading(true);
 
     d3.select(svgRef.current).selectAll("*").remove();
 
@@ -122,12 +122,12 @@ const AirportDelayTrendChart: React.FC<AirportDelayTrendChartProps> = ({ airport
         .attr("stroke-width", 2);
     }
 
-    setLoading(false);
+    // setLoading(false);
   }, [airportCode, airportsMapsRawData, color, selectedDate]);
 
-  useEffect(() => {
-    setLoading(true);
-  }, [selectedDate]);
+  // useEffect(() => {
+  //   // setLoading(true);
+  // }, [selectedDate]);
 
   return (
     <div className={`airport-delay-trend-chart`} ref={containerRef}>
