@@ -19,7 +19,6 @@ const CONFIG = {
 
 const AirlineDelaySection: React.FC = () => {
   const intervalRef = useRef<number | null>(null);
-  const [isFullscreen, setIsFullscreen] = useState(false);
   const [airlinesRawData, setAirlinesRawData] = useState<any[]>([]);
   const [airportsRawData, setAirportsRawData] = useState<any[]>([]);
   const [airlineNames, setAirlineNames] = useState<Map<string, string>>(new Map());
@@ -183,7 +182,7 @@ const AirlineDelaySection: React.FC = () => {
           By following the comparison above over time, we see that there is <b>no significant difference</b> in the delays of these three airlines. However, certain patterns emerge; for example, there is almost no <b>🔒 Security</b> delay for any of the airlines, with some exceptions, e.g., in November 2013. The majority of the delays are caused by the reasons <b>✈️ Carrier</b> and <b>🕒 Late Aircraft</b>, while <b>🌤️ Weather</b> contributes to a smaller portion of the delays.
         </p>
       </div>
-      <div className={`airline-delay-section ${isFullscreen ? 'fullscreen' : ''}`}>
+      <div className={`airline-delay-section`}>
         <div className="airline-delay-content">
           <div className="airline-selection">
             <div style={{ marginLeft: -20, marginBottom: 15 }}>
@@ -236,14 +235,14 @@ const AirlineDelaySection: React.FC = () => {
           <div className="airline-delay-visualization">
             {dataType == "airlines" ?
               <AirlineDelayBarChart
-                isFullscreen={isFullscreen}
+                isFullscreen={false}
                 airlineData={filteredAirlineData}
                 selectedAirlines={selectedAirlines}
                 airlineNames={airlineNames}
               />
               :
               <AirlineDelayBarChart
-                isFullscreen={isFullscreen}
+                isFullscreen={false}
                 airlineData={filteredAirportData}
                 selectedAirlines={selectedAirports}
                 airlineNames={airportNames}
