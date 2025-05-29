@@ -54,6 +54,16 @@
   padding: 20px;
 }
 
+.map-main-container {
+  position: 'absolute';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .usmap-text {
   flex: 1;
   text-align: left;
@@ -151,7 +161,6 @@
 .time-slider {
   width: 100%;
   height: 6px;
-  -webkit-appearance: none;
   appearance: none;
   background: #e0e0e0;
   border-radius: 3px;
@@ -210,25 +219,6 @@
   margin-bottom: 5px;
 }
 
-.map-instructions {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 12px;
-  opacity: 0.8;
-  pointer-events: none;
-}
-
-.map-instructions p {
-  margin: 0;
-  text-align: center;
-}
-
 .airport-tooltip {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.75);
@@ -258,18 +248,62 @@
 
 .airport-details-card {
   position: absolute;
-  left: 20px;
   top: 50%;
+  left: 20px;
   transform: translateY(-50%);
+  width: 400px;
   background-color: white;
-  width: 300px;
-  max-height: 80vh;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 20px;
   z-index: 1000;
-  overflow-y: auto;
-  animation: slideIn 0.3s ease;
+}
+
+.airport-header {
+  margin-bottom: 15px;
+}
+
+.airport-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.airport-code {
+  color: #666;
+  font-size: 1rem;
+}
+
+.airport-stats {
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.stat-value {
+  font-weight: 500;
+  color: #333;
+}
+
+.airport-trend {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.airport-trend h3 {
+  margin: 0 0 15px 0;
+  font-size: 1rem;
+  color: #333;
 }
 
 .close-card-btn {
@@ -278,51 +312,20 @@
   right: 10px;
   background: none;
   border: none;
-  cursor: pointer;
-  font-size: 16px;
   color: #666;
+  cursor: pointer;
+  padding: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: color 0.2s;
+  font-size: 14px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  transition: all 0.2s;
 }
 
-.airport-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  padding-right: 20px;
-}
-
-.airport-icon {
-  background-color: #3c91e6;
-  color: white;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 15px;
-  font-size: 18px;
-}
-
-.airport-header h2 {
-  margin: 0;
-  font-size: 18px;
+.close-card-btn:hover {
   color: #333;
-  line-height: 1.3;
-}
-
-.airport-code {
-  color: #666;
-  font-weight: normal;
-}
-
-.stat-item {
-  display: flex;
-  justify-content: space-between;
+  background-color: #f0f0f0;
 }
