@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState, useCallback, useMemo } from 'react'
 import * as d3 from 'd3';
 import './ChordDiagram.css';
 import TimeSlider from './utils/TimeSlider/TimeSlider';
-import AirportSelector from './utils/Selector/AirportSelector/AirportSelector';
+import ItemSelector from './utils/Selector/ItemSelector/ItemSelector';
 
 interface Route {
   origin: string;
@@ -31,6 +31,14 @@ interface Props {
 interface AvailableAirport {
   code: string;
   airport: string;
+  city: string;
+  state: string;
+  flightCount: number;
+}
+
+interface AirportForItemSelector {
+  code: string;
+  name: string;
   city: string;
   state: string;
   flightCount: number;
@@ -395,10 +403,16 @@ const ChordDiagram: React.FC<Props> = ({ className = '', isFullscreen = false })
       
       {isFullscreen && (
         <>
-          <AirportSelector
-            availableAirports={availableAirports}
-            selectedAirports={selectedAirports}
-            onAirportToggle={handleAirportToggle}
+          <ItemSelector
+            availableItems={availableAirports.map(a => ({
+              code: a.code,
+              name: a.airport,
+              city: a.city,
+              state: a.state,
+              flightCount: a.flightCount
+            }))}
+            selectedItems={selectedAirports}
+            onItemToggle={handleAirportToggle}
             onClearAll={handleClearAll}
             className="chord-diagram-airport-selector"
           />
