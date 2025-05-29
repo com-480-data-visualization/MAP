@@ -78,7 +78,59 @@ We are using GitHub Pages for hosting our project. Follow the following instruct
 
 ## Data Preparation 🧐
 
-TODO
+Data is already preprocessed and served in the website, however, you can follow the following steps to reproduce the preprocessed data.
+
+Data Source: <https://www.kaggle.com/datasets/yuanyuwendymu/airline-delay-and-cancellation-data-2009-2018>.
+
+### Prerequisite 🛠️
+
+You need followings installed and ready-to-use on your system.
+
+1. Python with Pandas
+
+2. Kaggle API; refer to [Kaggle API docs](https://github.com/Kaggle/kaggle-api/blob/main/docs/README.md#download-dataset-files) for installation instructions. Make sure you have set username and API key.
+
+### Reproduction 📊
+
+1. Download the dataset from Kaggle and unzip it.
+
+   - create directories.
+     
+     ```bash
+     mkdir milestones/m3/analysis/data
+     cd milestones/m3/analysis/data
+     ```
+
+   - download the data from Kaggle.
+     
+     ```bash
+     kaggle datasets download yuanyuwendymu/airline-delay-and-cancellation-data-2009-2018
+     ```
+
+   - unzip the data.
+     ```bash
+     unzip airline-delay-and-cancellation-data-2009-2018.zip
+     ```
+
+   - clean up.
+     ```bash
+     rm airline-delay-and-cancellation-data-2009-2018.zip
+     cd ../../../..
+     ```
+
+2. Execute the Python pre-processing script.
+
+   ```bash
+   python milestones/m3/analysis/airport_route_data.py
+   ```
+
+   The script will produce several processed CSV files in `milestones/m3/analysis/output`.
+
+3. Move the result to react `public`.
+
+   ```bash
+   cp milestones/m3/analysis/output/*.csv public/data/
+   ```
 
 ## Tech Stack 🧑‍💻
 
