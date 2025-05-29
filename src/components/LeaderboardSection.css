@@ -1,0 +1,247 @@
+.leaderboard-section {
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.leaderboard-section.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: #ffffff;
+  padding: 0;
+  overflow: hidden;
+}
+
+.leaderboard-section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+.fullscreen .leaderboard-section-content {
+  max-width: 100%;
+  height: 100%;
+}
+
+.leaderboard-section-text {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.leaderboard-section-text h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.leaderboard-section-text p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.leaderboard-section-text ul {
+  margin-left: 20px;
+  color: #555;
+}
+
+.leaderboard-section-text li {
+  margin-bottom: 8px;
+}
+
+.fullscreen .leaderboard-section-text {
+  display: none;
+}
+
+.leaderboard-section-visualization {
+  flex: 1;
+  position: relative;
+  height: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.fullscreen .leaderboard-section-visualization {
+  height: 100%;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.leaderboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+  padding: 0 40px;
+  gap: 20px;
+}
+
+.fullscreen .leaderboard-header {
+  background: none;
+  backdrop-filter: none;
+  border-radius: 0;
+  margin: 20px 0 30px 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.sort-icon-button {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #64748b;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.sort-icon-button:hover {
+  color: #1e40af;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sort-icon-button:active {
+  transform: translateY(0);
+}
+
+.action-btn {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.action-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.leaderboard-controls-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 1050;
+  display: flex;
+  gap: 10px;
+}
+
+.exit-fullscreen-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1100;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.exit-fullscreen-btn:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.exit-fullscreen-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.leaderboard-plot-container {
+  width: 100%;
+  margin: 0 auto;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+}
+
+.leaderboard-plot-container svg {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.fullscreen .leaderboard-plot-container {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  padding: 20px;
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+.fullscreen .leaderboard-plot-container svg {
+  min-height: 600px;
+}
+
+.time-slider-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  font-size: 16px;
+  color: #64748b;
+  font-weight: 500;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 12px;
+  border: 2px dashed #cbd5e1;
+}
+
+.x-axis text,
+.y-axis text {
+  font-size: 12px;
+}
