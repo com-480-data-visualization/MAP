@@ -365,3 +365,5 @@ $RECYCLE.BIN/
 # .pnp.*
 
 # End of https://www.toptal.com/developers/gitignore/api/node,yarn,visualstudiocode,webstorm+all,macos,linux,windows
+
+milestones/m3/analysis/data/*
