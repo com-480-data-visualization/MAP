@@ -131,9 +131,6 @@ const AirportDelayTrendChart: React.FC<AirportDelayTrendChartProps> = ({ airport
 
   return (
     <div className={`airport-delay-trend-chart`} ref={containerRef}>
-      {loading && (
-        <div className="loading-indicator">&nbsp;</div>
-      )}
       <svg ref={svgRef}></svg>
     </div>
   );
