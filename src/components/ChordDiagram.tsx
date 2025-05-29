@@ -36,14 +36,6 @@ interface AvailableAirport {
   flightCount: number;
 }
 
-interface AirportForItemSelector {
-  code: string;
-  name: string;
-  city: string;
-  state: string;
-  flightCount: number;
-}
-
 const CONFIG = {
   INITIAL_DATE: new Date(2009, 0, 1),
   DATE_RANGE: {
