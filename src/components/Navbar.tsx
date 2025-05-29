@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaGithub } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar: React.FC = () => {
@@ -81,11 +82,27 @@ const Navbar: React.FC = () => {
             Airline Delays
           </a>
           <a
+            href="#leaderboard"
+            className={`navbar-item ${activeSection === 'leaderboard' ? 'active' : ''}`}
+            onClick={handleLinkClick}
+          >
+            Leaderboard
+          </a>
+          <a
             href="#team"
             className={`navbar-item ${activeSection === 'team' ? 'active' : ''}`}
             onClick={handleLinkClick}
           >
             Team
+          </a>
+          <a
+            href="https://github.com/com-480-data-visualization/MAP"
+            className="navbar-item github-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleLinkClick}
+          >
+            <FaGithub size={20} />
           </a>
         </div>
 
