@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
             rel="noopener noreferrer"
             onClick={handleLinkClick}
           >
-            <FaGithub size={20} />
+            <FaGithub size={20} style={{width: 25}} />
           </a>
         </div>
 
