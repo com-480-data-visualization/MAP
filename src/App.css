@@ -36,12 +36,12 @@ html {
   padding-top: 50px;
   padding-bottom: 50px;
   margin-bottom: 20px;
-  background: linear-gradient(to bottom, #76c0ea, #6f9fe1);
+  background: linear-gradient(to bottom, #a0cce7, #7bb4e3);
   text-align: left;
 }
 
 .content-container-inside {
-  width: 40%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -51,6 +51,11 @@ html {
 }
 
 .content-container p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.content-container ul {
   margin-bottom: 20px;
   font-size: 1.2rem;
 }

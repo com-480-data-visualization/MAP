@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
             className={`navbar-item ${activeSection === 'airline-delay' ? 'active' : ''}`}
             onClick={handleLinkClick}
           >
-            Airline Delays
+            Comparing Delays
           </a>
           <a
             href="#parallel-coordinates"
