@@ -24,7 +24,7 @@ copyright for [Pilot Bible](https://pilotbible.com/atc-slots-ready-message/)
 
 - [Website](https://com-480-data-visualization.github.io/MAP/) 🕸️
 - [Process Book]() 📖
-- [Screen Cast]() 📽️
+- [Screen Cast](https://www.youtube.com/watch?v=Nr7M50dNj-I) 📽️
 
 ## Structure of the Repository 🏛️
 
