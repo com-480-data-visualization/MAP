@@ -1,14 +1,9 @@
 :root {
   --primary: #007bff;
-  --danger: #dc3545;
   --border: #ddd;
-  --border-light: #eee;
   --text-primary: #333;
   --text-secondary: #666;
-  --text-muted: #999;
-  --bg-light: #f8f9fa;
   --shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  --radius: 4px;
   --radius-lg: 8px;
   --transition: all 0.2s ease;
 }
