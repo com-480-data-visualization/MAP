@@ -207,6 +207,8 @@ const LeaderboardSection: React.FC = () => {
           <p>
             On the other hand, we see <b>Comair</b>, <b>Frontier</b>, and <b>JetBlue</b> being mostly among the worst airlines in terms of delays. Interestingly, when it comes to <b>airports</b>, we do not observe any consistent pattern, with regional airports being both among the best and worst performers.
           </p>   
+
+          <p className='open-fullscreen-tip'>Click on the full screen icon on the top right of the plot to open the interactive visualization!</p>
         </div>
 
         <div className="leaderboard-section-visualization">
@@ -258,6 +260,7 @@ const LeaderboardSection: React.FC = () => {
             </div>
           )}
         </div>
+
       </div>
       
       {isFullscreen && (

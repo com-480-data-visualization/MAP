@@ -27,6 +27,8 @@ const ChordSection: React.FC = () => {
           <p>
             Interacting with the plot gives us interesting insights into the delay patterns over time. For example, by tapping on the <b>play</b> button on the bottom, and observing the changes in the connections, we see an increase in <b><span style={{color: "red"}}>red</span></b> and <b><span style={{color: "orange"}}>orange</span></b> colors around <b>April</b> to <b>August</b> of most years, mostly focusing on <b>June</b> and <b>July</b>, indicating higher delays during the certain seasons throughout the year. We see increases in the <b><span style={{color: "red"}}>red</span></b> and <b><span style={{color: "orange"}}>orange</span></b> colors, even in less crowded months, if you add certain airports to the visualization; try adding <b>Newark Liberty</b> to the <b>January 2009</b> time period to see how the <b><span style={{color: "orange"}}>orange</span></b> color is introduced to an otherwise <b><span style={{color: "rgb(9, 143, 232)"}}>blue</span></b> and <b><span style={{color: "green"}}>green</span></b> diagram.
           </p>
+
+          <p className='open-fullscreen-tip'>Click on the full screen icon on the top right of the plot to open the interactive visualization!</p>
         </div>
 
         <div className="chord-section-visualization">

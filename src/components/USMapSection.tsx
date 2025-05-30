@@ -52,7 +52,7 @@ const USMapSection: React.FC = () => {
           delays[key].push(Number(row.AverageDelay));
         });
         Object.entries(delays).forEach(([k, arr]) => {
-          const sorted = arr.sort((a,b) => a - b);
+          const sorted = arr.sort((a, b) => a - b);
           quartiles[k] = {
             q1: d3.quantileSorted(sorted, 0.25) || 0,
             median: d3.quantileSorted(sorted, 0.5) || 0,
@@ -67,7 +67,7 @@ const USMapSection: React.FC = () => {
   useEffect(() => {
     if (airportsRawData.length <= 0 || airportsMapsRawData.length <= 0) return;
 
-    const mappingData = new Map<string, {name: string; code: string; coordinates: [number, number]}>();
+    const mappingData = new Map<string, { name: string; code: string; coordinates: [number, number] }>();
     airportsRawData.forEach(d => {
       if (["PR", "VI", "AS", "GU", "MP"].includes(d.STATE)) return; // no states outside the map coordinates
       mappingData.set(d.IATA_CODE, {
@@ -247,12 +247,12 @@ const USMapSection: React.FC = () => {
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!isFullscreen) return;
-    
+
     const timeSliderContainer = document.querySelector('.time-slider-container');
     if (timeSliderContainer && timeSliderContainer.contains(e.target as Node)) {
       return;
     }
-    
+
     setIsDragging(true);
     setStartPosition({ x: e.clientX - position.x, y: e.clientY - position.y });
   };
@@ -321,7 +321,7 @@ const USMapSection: React.FC = () => {
         <div className="usmap-text">
           <h2>Delays on the Map 🗺️</h2>
           <p>
-           Let's take a quick look at the flight delays of different airports across the United States. Use the <b>full screen button</b> on the top right corner to <b>start interacting</b> with the map. The size of circles show the number of flights, while the colors (<b><span style={{ color: '#00cc00' }}>low</span>, <span style={{ color: '#99cc00' }}>medium</span>, <span style={{ color: '#ffcc00' }}>high</span>, <span style={{ color: '#cc0000' }}>very high</span></b>) indicate the delay. Feel free to zoom using the designated buttons on the bottom right on the screen, and then click on an airport to see its details, including delay trend over time.
+            Let's take a quick look at the flight delays of different airports across the United States. Use the <b>full screen button</b> on the top right corner to <b>start interacting</b> with the map. The size of circles show the number of flights, while the colors (<b><span style={{ color: '#00cc00' }}>low</span>, <span style={{ color: '#99cc00' }}>medium</span>, <span style={{ color: '#ffcc00' }}>high</span>, <span style={{ color: '#cc0000' }}>very high</span></b>) indicate the delay. Feel free to zoom using the designated buttons on the bottom right on the screen, and then click on an airport to see its details, including delay trend over time.
           </p>
           <p>
             <i><b>Bonus:</b></i> clicking on an airport in the <b>full screen</b> mode will also show you the <b>routes</b> that are connected to it, and you can see the delays of those routes as well using the same colors. Give it a try!
@@ -338,13 +338,13 @@ const USMapSection: React.FC = () => {
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
-          style={{ 
+          style={{
             cursor: isDragging ? 'grabbing' : 'grab',
             overflow: 'hidden',
             position: 'relative'
           }}
         >
-          <div 
+          <div
             className="map-main-container"
             style={{
               transform: `translate(${position.x}px, ${position.y}px)`,
@@ -388,24 +388,24 @@ const USMapSection: React.FC = () => {
               {airports
                 .filter(airport => Number(airport.avgDelay) !== 0)
                 .map((airport) => (
-                <Marker
-                  key={airport.code}
-                  coordinates={airport.coordinates}
-                  onClick={() => handleMarkerClick(airport)}
-                  className="airport-marker"
-                  onMouseEnter={() => setHoveredAirport(airport)}
-                  onMouseLeave={() => setHoveredAirport(null)}
-                >
-                  <circle
-                    r={getAirportSize(airport.business)}
-                    fill={getDelayColor(Number(airport.avgDelay))}
-                    stroke={selectedAirport?.code == airport.code ? "black" : "#fff"}
-                    style={{ cursor: 'pointer' }}
-                    strokeWidth={selectedAirport?.code == airport.code ? 3 : 2}
-                    opacity={0.8}
-                  />
-                </Marker>
-              ))}
+                  <Marker
+                    key={airport.code}
+                    coordinates={airport.coordinates}
+                    onClick={() => handleMarkerClick(airport)}
+                    className="airport-marker"
+                    onMouseEnter={() => setHoveredAirport(airport)}
+                    onMouseLeave={() => setHoveredAirport(null)}
+                  >
+                    <circle
+                      r={getAirportSize(airport.business)}
+                      fill={getDelayColor(Number(airport.avgDelay))}
+                      stroke={selectedAirport?.code == airport.code ? "black" : "#fff"}
+                      style={{ cursor: 'pointer' }}
+                      strokeWidth={selectedAirport?.code == airport.code ? 3 : 2}
+                      opacity={0.8}
+                    />
+                  </Marker>
+                ))}
 
               {hoveredAirport && (
                 <g style={{ pointerEvents: 'none' }}>
@@ -418,7 +418,7 @@ const USMapSection: React.FC = () => {
                           <rect
                             x={-55} y={-getAirportSize(hoveredAirport.business) - tooltipHeight - 4}
                             width={110} height={tooltipHeight}
-                            rx={6} fill="#fff" stroke="#ccc" strokeWidth={0.5} opacity={0.92}/>
+                            rx={6} fill="#fff" stroke="#ccc" strokeWidth={0.5} opacity={0.92} />
                           <text
                             x={0} y={-getAirportSize(hoveredAirport.business) - tooltipHeight + 6}
                             textAnchor="middle" fontSize="9px" fill="#222" fontWeight="bold" style={{ dominantBaseline: 'middle' }}>
@@ -488,6 +488,7 @@ const USMapSection: React.FC = () => {
             </div>
           )}
         </div>
+
       </div>
     </div>
   );
