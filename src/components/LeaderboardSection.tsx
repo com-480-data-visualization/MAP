@@ -261,6 +261,22 @@ const LeaderboardSection: React.FC = () => {
           )}
         </div>
 
+        <div className="leaderboard-section-text" style={{ marginTop: '20px' }}>
+          <p>
+            With the <b>Hawaiian Airlines</b> being the winner in our <i>competition</i>, let's see some interesting facts about the airline ✈️
+          </p>
+
+          <ul>
+            <li>🕰️ Hawaiian Airlines is the oldest airline in the US that has <b>never</b> had a <b>fatal accident</b></li>
+            <li>✈️ It started operation 95 years ago in 1929, now flies to 31 destinations, and has a fleet of 74 aircraft</li>
+            <li>🔟 It is the <b>tenth largest</b> airline in the US by passenger count</li>
+            <li>📉 It comes with the fewest <b>overbooking</b> and <b>cancellation</b> issues in the US</li>
+            <li>⏰ It is known in the US as a very <b>punctual</b> airline, which was also supported by our visualization</li>
+            <li>🤝 And maybe the most interesting fact: in September 2024, the <b>Alaska Air Group</b>, which owns Alaska Airlines - another airline performing well in our leaderboard - acquired Hawaiian Airlines, so now both airlines are part of the same group!</li>
+          </ul>
+          
+        </div>
+
       </div>
       
       {isFullscreen && (
