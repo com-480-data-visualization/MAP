@@ -84,7 +84,7 @@ const USMapSection: React.FC = () => {
       if (!currentData) {
         return;
       }
-      const entry = { ...currentData, avgDelay: Number(row.AverageDelay), business: Number(row.NumFlights), delay: 0 };
+      const entry = { ...currentData, avgDelay: Number(row.AverageDelay), business: Number(row.NumFlights) };
       if (!byMonthRef[key]) byMonthRef[key] = [];
       byMonthRef[key].push(entry);
     });
