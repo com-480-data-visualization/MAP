@@ -1,6 +1,6 @@
 .parallel-coordinates-container {
   padding: 40px 20px;
-  background: #fff;
+  background: transparent;
   color: #333;
   min-height: 100vh;
   display: flex;
