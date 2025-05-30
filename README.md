@@ -26,6 +26,8 @@ copyright for [Pilot Bible](https://pilotbible.com/atc-slots-ready-message/)
 - [Process Book]() 📖
 - [Screen Cast]() 📽️
 
+[![Watch the Screen Cast](https://img.youtube.com/vi/Nr7M50dNj-I/maxresdefault.jpg)](https://youtu.be/Nr7M50dNj-I)
+
 ## Structure of the Repository 🏛️
 
 The repository is holding the structure of our react project. This is mainly for easy deployment. The assets of each milestones are included in the following directories.
