@@ -263,7 +263,7 @@ const LeaderboardSection: React.FC = () => {
 
         <div className="leaderboard-section-text" style={{ marginTop: '20px' }}>
           <p>
-            With the <b>Hawaiian Airlines</b> being the winner in our <i>competition</i>, let's see some interesting facts about the airline ✈️
+            With the <b>Hawaiian Airlines</b> being the winner in our <i>competition</i>, let's see some interesting facts about the airline:
           </p>
 
           <ul>
