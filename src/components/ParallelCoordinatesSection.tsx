@@ -10,7 +10,7 @@ const ParallelCoordinatesSection: React.FC = () => {
           <div className="section-header">
             <h2>Delay Patterns and Performance Indicators 📈📉</h2>
             <p>
-              Let's look at the data from another viewpoint! 🔬 This <b>parallel-coordinates</b> plot can help you explore relationships and patterns easier, while at the same time, enabling you to <b>filter</b> the aggregated data based on different ranges of performance indicators. Each <b>line</b> represents an airline or airport, color coded from green to red based on the average delay.
+              Let's look at the data from another viewpoint! 🔬 This <b>parallel-coordinates</b> plot can help you explore relationships and patterns easier, while at the same time, enabling you to <b>filter</b> the data <b>aggregated over time</b> based on different ranges of performance indicators. Each <b>line</b> represents an airline or airport, color coded from green to red based on the average delay.
             </p>
             <p>
               You can select which airlines or airports to include or not include in the plot, from the <b>list</b> on the left. <b>Hovering</b> your mouse on each line shows you information about the airline or airport. Moreover, you can <b>drag your mouse</b> over the axes to <b>filter</b> the data based on the values of the performance indicators. This way, you can focus on <b>specific ranges</b> of values that interest you. To cancel your drag selection, click on somewhere else on the axis.
