@@ -83,7 +83,7 @@ const TeamSection: React.FC = () => {
           </div>
         </div>
 
-        <p>We hope you enjoyed using our visualizations!</p>
+        <p>We hope you enjoyed using our website and visualizations!</p>
       </div>
     </div>
   );
