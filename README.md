@@ -23,8 +23,8 @@ copyright for [Pilot Bible](https://pilotbible.com/atc-slots-ready-message/)
 ## Final Deliverables 🚚
 
 - [Website](https://com-480-data-visualization.github.io/MAP/) 🕸️
-- [Process Book]() 📖
-- [Screen Cast]() 📽️
+- [Process Book](https://github.com/com-480-data-visualization/MAP/blob/main/milestones/m3/ProcessBook.pdf) 📖
+- [Screen Cast](https://www.youtube.com/watch?v=Nr7M50dNj-I) 📽️
 
 [![Watch the Screen Cast](https://img.youtube.com/vi/Nr7M50dNj-I/maxresdefault.jpg)](https://youtu.be/Nr7M50dNj-I)
 
